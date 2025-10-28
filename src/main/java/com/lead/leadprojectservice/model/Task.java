@@ -34,5 +34,5 @@ public class Task {
     private Long projectId;
 
     //Optional Jira field
-    private String JiraIssueId;
+    private String jiraIssueId;
 }

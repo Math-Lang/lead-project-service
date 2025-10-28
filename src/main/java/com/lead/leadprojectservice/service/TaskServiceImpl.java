@@ -45,6 +45,14 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
+    public Task finByProjectId(Long projectId) {
+        return taskRepository.findByProjectId(projectId)
+                .stream()
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("No tasks found for the project"));
+    }
+
+    @Override
     public List<Task> getAllTasks() {
         return taskRepository.findAll();
     }
